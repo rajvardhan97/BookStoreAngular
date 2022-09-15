@@ -16,7 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './Components/dashboard/dashboard/dashboard.component';
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu'
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+import { GetAllBookComponent } from './Components/getallbook/get-all-book/get-all-book.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { MatMenuModule } from '@angular/material/menu'
     LoginComponent,
     ForgotpasswordComponent,
     ResetpasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    GetAllBookComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { MatMenuModule } from '@angular/material/menu'
     ReactiveFormsModule,
     HttpClientModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

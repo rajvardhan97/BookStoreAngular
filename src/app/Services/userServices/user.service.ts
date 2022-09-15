@@ -17,7 +17,7 @@ export class UserService {
         'Content-type': 'application/json'
       })
     }
-    return this.httpService.postService('User/Register', reqdata, false, header)
+    return this.httpService.postService('/User/Register', reqdata, false, header)
   }
   login(reqdata:any){
     let header = {

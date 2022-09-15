@@ -15,16 +15,16 @@
             <button type="button" class="login" routerLink="/login">LOGIN</button>
             <button type="button" class="signup" routerLink="/register">SIGNUP</button>
         </div>
-        <form>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="form-fields">
 
                 <div class="field">
                     <div>
-                        <mat-label>Email Id</mat-label>
+                        <mat-label>EmailId</mat-label>
                     </div>
                     <div>
                         <mat-form-field appearance="outline">
-                            <input type="text" class="input-field" formControlName="emailId" matInput placeholder="">
+                            <input type="text" class="input-field" formControlName="EmailId" matInput placeholder="">
                             <mat-error>Enter an email address</mat-error>
                         </mat-form-field>
                     </div>
@@ -36,7 +36,7 @@
                     </div>
                     <div>
                         <mat-form-field appearance="outline">
-                            <input type="password" class="input-field" formControlName="password" matInput placeholder="">
+                            <input type="password" class="input-field" formControlName="Password" matInput placeholder="">
                             <mat-error>Enter a password</mat-error>
                         </mat-form-field>
                     </div>

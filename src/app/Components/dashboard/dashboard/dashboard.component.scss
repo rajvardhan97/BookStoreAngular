@@ -1,0 +1,73 @@
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.tool {
+    background-color: brown;
+}
+
+#text {
+    color: white;
+}
+
+.img-Icon{
+    padding-left: 64%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
+.search {
+    margin-left: 16%;
+    width: 29%;
+    height: 51%;
+    padding: 0px;
+}
+.searchInput {
+    height: 66%;
+    width: 86%;
+    border: none;
+    outline: none;
+    font-size: 23px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    color: dimgrey;
+}
+.Profile{
+    display: flex;
+    flex-direction: column-reverse;
+    background: brown;
+    border-color: brown;
+    color: white;
+    border: transparent;
+    padding-left: 18%;
+    cursor: pointer;
+}
+.cart{
+    display: flex;
+    flex-direction: column-reverse;
+    background: brown;
+    border-color: brown;
+    color: white;
+    border: transparent;
+    padding-left: 214%;
+    cursor: pointer;
+}
+.wishlistIcon {
+    color: brown;
+}
+
+.wishlistbutton {
+    margin-top: -20px;
+}
+.welcome {
+    margin-left: 18px;
+}
+.footer {
+    background-color: #2E1D1E;
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    margin-top: 39%;
+    
+}
