@@ -8,7 +8,7 @@ import { UserService } from 'src/app/Services/userServices/user.service';
   styleUrls: ['./registeration.component.scss']
 })
 export class RegisterationComponent implements OnInit {
-  registerForm! : FormGroup;
+  registerForm : FormGroup;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder,private user: UserService) { }

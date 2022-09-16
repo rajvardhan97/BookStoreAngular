@@ -8,7 +8,7 @@ import { UserService } from 'src/app/Services/userServices/user.service';
   styleUrls: ['./forgotpassword.component.scss']
 })
 export class ForgotpasswordComponent implements OnInit {
-  forgotForm! : FormGroup;
+  forgotForm : FormGroup;
   submitted = false;
 
   constructor(private formBuilder: FormBuilder,private user : UserService) { }

@@ -9,7 +9,7 @@ import { UserService } from 'src/app/Services/userServices/user.service';
   styleUrls: ['./resetpassword.component.scss']
 })
 export class ResetpasswordComponent implements OnInit {
-  resetForm! : FormGroup;
+  resetForm : FormGroup;
   submitted = false;
   token : any;
 

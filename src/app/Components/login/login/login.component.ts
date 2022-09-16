@@ -9,7 +9,7 @@ import { UserService } from 'src/app/Services/userServices/user.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  loginForm! : FormGroup;
+  loginForm : FormGroup;
   submitted = false;
   token:any;
 
@@ -33,10 +33,8 @@ export class LoginComponent implements OnInit {
       
       this.user.login(data).subscribe((res: any) => {
         console.log(res);
-        localStorage.setItem("token",res.data.token);
-        localStorage.setItem("FullName",res.data.FullName);
-        localStorage.setItem("MobileNumber",res.data.MobileNumber);
-        this.router.navigateByUrl('/dashboard')
+        localStorage.setItem("token",res.data);
+        console.log(res.data);
       })
     }
 }

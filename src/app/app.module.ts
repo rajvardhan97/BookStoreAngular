@@ -18,7 +18,12 @@ import { DashboardComponent } from './Components/dashboard/dashboard/dashboard.c
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
-import { GetAllBookComponent } from './Components/getallbook/get-all-book/get-all-book.component'
+import { GetAllBookComponent } from './Components/getallbook/get-all-book/get-all-book.component';
+import { CartComponent } from './Components/Cart/cart/cart.component';
+import { WishlistComponent } from './Components/wishlist/wishlist/wishlist.component';
+import { OrderComponent } from './Components/order/order/order.component';
+import { QuickviewComponent } from './Components/quickview/quickview/quickview.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,11 @@ import { GetAllBookComponent } from './Components/getallbook/get-all-book/get-al
     ForgotpasswordComponent,
     ResetpasswordComponent,
     DashboardComponent,
-    GetAllBookComponent
+    GetAllBookComponent,
+    CartComponent,
+    WishlistComponent,
+    OrderComponent,
+    QuickviewComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +51,8 @@ import { GetAllBookComponent } from './Components/getallbook/get-all-book/get-al
     HttpClientModule,
     MatIconModule,
     MatMenuModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
