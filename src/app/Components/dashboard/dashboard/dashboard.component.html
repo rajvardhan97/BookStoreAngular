@@ -10,7 +10,7 @@
           <button mat-icon-button>
             <mat-icon class="searchIcon">search</mat-icon>
           </button>
-          <input class="searchInput" type="text" name="search" placeholder="Search.."/>
+          <input class="searchInput" type="text" name="search" placeholder="Search.." (keyup)="Search($event)"/>
         </mat-card>
 
         <button class="Profile" mat-button [matMenuTriggerFor]="menu" >Profile <mat-icon class="searchIcon">perm_identity
@@ -25,7 +25,7 @@
              My Wishlist
             </button>  
             <div mat-menu-item>
-              <button class="logoutbutton">Logout</button>
+              <button class="logoutbutton" (click)="Logout()">Logout</button>
             </div>
           </mat-menu>
         </button>

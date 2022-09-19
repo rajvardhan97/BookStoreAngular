@@ -15,8 +15,8 @@
     </div>
 
     <div class="bookcard">
-        <div class="entirebook" *ngFor="let Book of booksArray">
-            <div class="bookimg" routerLink="/dashboard/quickview">
+        <div class="entirebook" *ngFor="let Book of booksArray | filter: searchBook">
+            <div class="bookimg" (click)="quickView(Book.bookId)" routerLink="/dashboard/quickview">
                 <img class="img1" [src]="Book.bookImage" >
             </div>
             <h2 class="title">{{Book.bookName}}</h2>

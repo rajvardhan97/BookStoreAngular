@@ -24,6 +24,7 @@ import { WishlistComponent } from './Components/wishlist/wishlist/wishlist.compo
 import { OrderComponent } from './Components/order/order/order.component';
 import { QuickviewComponent } from './Components/quickview/quickview/quickview.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { FilterPipe } from './pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MatDividerModule } from '@angular/material/divider';
     CartComponent,
     WishlistComponent,
     OrderComponent,
-    QuickviewComponent
+    QuickviewComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

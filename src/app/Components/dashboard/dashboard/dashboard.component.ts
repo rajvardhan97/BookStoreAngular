@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/Services/dataServices/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataservice : DataService, private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  Search(event:any){
+    console.log(event.target.value)
+    this.dataservice.outgoingData(event.target.value)
+}
+Logout() 
+  {
+    localStorage.removeItem("token");
+    this.router.navigateByUrl('/login');
+  }
 }

@@ -24,17 +24,17 @@ export class BookService {
   }
 
   getBookById(bookId:any){
-    console.log("getting boook");
+    console.log(bookId);
     let header = {
       Headers: new HttpHeaders({
         'Content-type': 'application/json',
+        'Authorization': 'Bearer '+ this.token
       })
     }
-    console.log(header);
     return this.httpService.getService('/Books/GetBookByID?BookId=' + bookId, true, header);
   }
 
-  getCart(UserId:any) {
+  getCart() {
     let header = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
@@ -42,18 +42,17 @@ export class BookService {
       })
     }
     console.log('token',this.token);
-    console.log(header);
-    return this.httpService.getService('/Cart/GetAllCart?UserId='+UserId, true, header);
+    return this.httpService.getService('/Cart/GetAllCart', true, header);
   }
 
-  getWishlist(UserId:any){
+  getWishlist(){
     let header={
       headers: new HttpHeaders({
         'Content-Type' : 'application/json',
         'Authorization': 'Bearer '+this.token
       })
     }
-    return this.httpService.getService('/Wishlist/Getwishlist?UserId='+UserId,true,header)
+    return this.httpService.getService('/Wishlist/Getwishlist',true,header);
   }
 
   removeFromWishlist(wishlistId:any){
