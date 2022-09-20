@@ -6,10 +6,12 @@
       <span style="color: black; font-weight: 500;">My Wishlist({{wishlist.length}})</span>
     </div>
     <span class="item" *ngIf="wishlist.length<1" >Wishlist is Empty</span>
+    
     <div class="item" *ngFor="let book of wishlist" >
-      <div >
-        <div class="img">
+      <div class="img">
             <img class="book-image" src="{{book.bookImage}}" width="90px" height="110px">
+      </div>
+            
             <div class="book-details" >
               <h3 class="bookName">{{book.bookName}}</h3>
               <span class="authorName">by {{book.authorName}}</span>
@@ -18,11 +20,6 @@
                   <div><span class="originalPrice">Rs. {{book.originalPrice}}</span></div>
               </div>
           </div>
-          </div>
-        
+    <img class="delete" src="../../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg" width="25px" (click)="removeFromWishlist(book.wishlistId)">
     </div>
-        <img class="delete" src="../../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg" width="25px">
-  
-    </div>
-  </div>
-  
+</div>

@@ -26,7 +26,7 @@ export class BookService {
   getBookById(bookId:any){
     console.log(bookId);
     let header = {
-      Headers: new HttpHeaders({
+      headers: new HttpHeaders({
         'Content-type': 'application/json',
         'Authorization': 'Bearer '+ this.token
       })
@@ -64,4 +64,15 @@ export class BookService {
     }
     return this.httpService.DeleteService('/Wishlist/Removefromwishlist?wishlistId='+wishlistId,true,header)
   }
+
+  addToWishlist(reqData:any ,bookId:any){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer '+this.token
+      })
+    }
+    return this.httpService.postService('/Wishlist/AddtoWishlist?bookId='+bookId, reqData, true, header);
+  }
+
 }

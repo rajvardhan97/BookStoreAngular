@@ -9,11 +9,11 @@
 }
 
 .main-content {
-    width: 69%;
-    height: 352px;
+    width: 82%;
+    height: 354px;
     border: 2px solid #E4E4E4;
     margin-top: 3%;
-    margin-left: 7%;
+    margin-left: -1%;
 }
 .details-content{
     padding: 1px 39px;
@@ -49,16 +49,33 @@
 .image-box{
     width: 6%;
    }
-.bookName {
-    height: 24px;
-    width: 167px;
-}
 
-.authorName {
-    height: 16px;
-    width: 76px;
-}
+.bookName{
+        letter-spacing: 0px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #0A0102;
+        margin-bottom: 10px;
+    }
 
+    .authorName{
+        letter-spacing: 0px;
+        font-weight: 500;
+        color: #878787;
+        margin-bottom: 10px;
+      }
+      .discountPrice{
+        font-size: 16px;
+        font-weight: 600;
+        color: #0A0102;
+        margin-right: 10px;
+      }
+      .originalPrice{
+        font-weight: 600;
+        text-decoration: line-through;
+        letter-spacing: 0px;
+        color: #878787;
+      }
 .bodyBox {
     height: 180px;
 }
@@ -138,15 +155,6 @@
 }
 
 
-.bookName {
-    height: 24px;
-    width: 167px;
-}
-
-.authorName {
-    height: 16px;
-    width: 76px;
-}
 
 .bodyBox {
     // height: 180px;
@@ -175,7 +183,7 @@
     cursor: pointer;
     margin-top: -6%;
     float: right;
-    margin-right: 1%;
+    margin-right: 20%;
 }
 .address {
     background: gainsboro;
@@ -201,3 +209,19 @@
     flex-wrap: nowrap;
     border: 2px solid #0000;
 }
+    .item{
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        border: none;
+        padding: 40px;
+      
+      }
+      .book-image{
+        box-shadow: 2px 2px 5px gray;
+      }
+      .book-details{
+        padding: 0px 25px;
+    width: 100%;
+      }

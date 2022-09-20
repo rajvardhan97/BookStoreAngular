@@ -14,36 +14,29 @@
         </div>
         <div class="bodyBox">
 
-            <div *ngFor="let Book of booksArray">
-
-                <div class=”image-box”>
-                    <img src="{{Book.bookImage}}" width="90px" height="110px" class="image">
+        
+            <div class="item" *ngFor="let Book of booksArray"  >
+                <div class="img">
+                      <img class="book-image" src="{{Book.bookImage}}" width="90px" height="110px">
                 </div>
-
-                <div class="details-content">
-
-                    <div>
-
-                        <div>
-                            <h2 class="title">{{Book.bookName}}</h2>
-                            <p id="para"> by {{Book.authorName}}</p>
+                      
+                      <div class="book-details" >
+                        <h3 class="bookName">{{Book.bookName}}</h3>
+                        <span class="authorName">by {{Book.authorName}}</span>
+                        <div >
+                            <div><span class="discountPrice">Rs. {{Book.discountPrice}}</span></div>
+                            <div><span class="originalPrice">Rs. {{Book.originalPrice}}</span></div>
                         </div>
+                        <div class="quantity">
+                            <img class="circle" src="../../assets/remove_circle_outline_black_24dp.svg" >
+                            <div class="inputBox">{{Book.quantity}}</div>
+                            <img class="circle" src="../../assets/add_circle_outline_black_24dp.svg">
+                            <button class="remove-btn" >Remove</button>
+                            </div>
                     </div>
-                    <div>
-                        <b style="margin-left: 18px;">Rs. {{Book.discountPrice}}</b>
-                        <del id="del"> Rs. {{Book.originalPrice}}</del>
-                    </div>
-                    <div class="quantity">
-                        <img class="circle" src="../../assets/remove_circle_outline_black_24dp.svg" >
-                        <div class="inputBox">{{Book.quantity}}</div>
-                        <img class="circle" src="../../assets/add_circle_outline_black_24dp.svg">
-                        <button class="remove-btn" >Remove</button>
-                    </div>
-
-                    
-                </div>
-            </div>
+              </div>
         </div>
+    </div>
 
         <div>
             <button mat-raised matTooltip="Place Order!" class="button1">
@@ -68,7 +61,4 @@
             </div>
         </mat-toolbar>
     </div>
-
-    
-</div>
 

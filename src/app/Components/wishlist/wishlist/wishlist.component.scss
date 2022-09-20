@@ -62,6 +62,35 @@
 .delete{
   margin-left: 463px;
 }
-.img{
-  margin: 1px;
+
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  
+  .product-image {
+    text-align: center;
+      width: 10px;
+  
+  }
+  
+  .product-details {
+    .bookName {
+      margin-right: 20px;
+    }
+    .authorName {
+      margin: 5px 20px 5px 0;
+      line-height: 1.4em;
+    }
+  }
+  
+  .originalPrice, .discountPrice {
+    input {
+      width: 40px;
+      
+    }
+  }
+}
+.home{
+  cursor: pointer;
 }
